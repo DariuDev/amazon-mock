@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>FontAwesome.ttf</string>
+		<string>Ionicons</string>
 		<string>AntDesign.ttf</string>
 		<string>EvilIcons.ttf</string>
 		<string>Entypo.ttf</string>

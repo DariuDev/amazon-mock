@@ -1,10 +1,22 @@
-import {View, Text} from 'react-native';
-import React from 'react';
+import {View, Text, FlatList} from 'react-native';
+import React,{useContext} from 'react';
+import {ResultProvider} from '../../providers/ResultProvider';
+import {Card} from '../../components/Card'
 
 export const Result = ({navigation}) => {
+  const {result} = useContext(ResultProvider);
+
   return (
     <View>
-      <Text>result</Text>
+      <FlatList
+        data={result}
+        renderItem={({item}) => {
+          return (
+            <Card card={item}/>
+          );
+        }}
+        keyExtractor={item => item.id}
+      />
     </View>
   );
 };
