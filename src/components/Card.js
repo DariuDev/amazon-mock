@@ -56,6 +56,7 @@ export const Card = ({card = {}}) => {
         <Image
           style={{width: 125, height: 125, alignSelf: 'flex-end'}}
           source={{uri: image}}
+          resizeMode='contain'
         />
       </View>
     </View>
