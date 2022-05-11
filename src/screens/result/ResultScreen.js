@@ -1,9 +1,9 @@
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, SafeAreaView} from 'react-native';
 import React,{useContext} from 'react';
 import {ResultProvider} from '../../providers/ResultProvider';
 import {Card} from '../../components/card/Card';
 
-export const Result = ({navigation}) => {
+export const Result = () => {
   const {result} = useContext(ResultProvider);
 
   return (
@@ -12,7 +12,9 @@ export const Result = ({navigation}) => {
         data={result}
         renderItem={({item}) => {
           return (
-            <Card card={item}/>
+            <SafeAreaView>
+            <Card card={item}/> 
+            </SafeAreaView>
           );
         }}
         keyExtractor={item => item.id}
